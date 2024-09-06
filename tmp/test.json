@@ -1,0 +1,13 @@
+{
+  "spawnPoint": [16, 0],
+  "finishPoint": [304, 0],
+  "entityConfigs": [
+    {
+      "entityType": "Platform",
+      "properties": {
+        "initialPosition": [0, 0],
+        "dimensions": [320, 32]
+      }
+    }
+  ]
+}
