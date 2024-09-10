@@ -4,28 +4,24 @@
 
 #ifndef ENGINE_H
 #define ENGINE_H
-#include <vector>
-#include <Eigen/Dense>
 #include "../entity/Entity.hpp"
-#include "../level/Level.hpp"
 
 using Eigen::Vector2d;
 
 class Engine
 {
-private:
-    Level activeLevel;
-    std::vector<Entity> entities;
+    Entity* rootEntity = nullptr;
+
 
 public:
     Engine();
 
-    Level getActiveLevel();
-    std::vector<Entity> getEntities();
+    Entity* getRootEntity();
 
+    void load(std::string &rootEntityPath);
     void init();
-    void loop();
-    void addEntity();
+    void run();
+    void stop();
 };
 
 #endif //ENGINE_H

@@ -6,7 +6,7 @@
 
 using json = nlohmann::json;
 
-Platform::Platform(json properties) {
+Platform::Platform(json &properties) : Entity(properties) {
     json ip = properties.at("initialPosition");
     initialPosition = Vector2d(ip.at(0), ip.at(1));
 

@@ -18,7 +18,7 @@ protected:
     Vector2d dimensions;
 
 public:
-    explicit Platform(json properties);
+    explicit Platform(json &properties);
 
     Vector2d getDimensions();
 
