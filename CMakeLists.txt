@@ -1,31 +1,18 @@
-cmake_minimum_required(VERSION 3.29)
-project(franny VERSION 1.0)
+cmake_minimum_required(VERSION 3.15...3.30)
 
-#if(NOT EMSCRIPTEN)
-#    message(FATAL_ERROR "This example must be compiled with emscripten")
-#endif()
+# ---- Project ----
 
-set(target "franny")
-set(CMAKE_CXX_STANDARD 20)
-#set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -s ASSERTIONS=1 -s WASM=1 -s SAFE_HEAP=1")
-
-include_directories(external)
-find_package(SDL2 REQUIRED COMPONENTS SDL2)
-
-add_executable(${target} src/main.cpp
-        src/entity/Level.hpp
-        src/engine/engine.hpp
-        src/entity/Entity.hpp
-        src/entity/Level.cpp
-        src/entity/Platform.hpp
-        src/entity/Platform.cpp
-        src/engine/Engine.cpp
-        src/utility/entity.hpp
-        src/utility/string.hpp
+# Note: update this to your new project's name and version
+project(
+        Franny
+        VERSION 1.0
+        LANGUAGES CXX C
 )
 
-target_link_libraries(${target} PRIVATE SDL2::SDL2)
-#set_target_properties(${target} PROPERTIES OUTPUT_NAME "main")
-#set_target_properties(${target} PROPERTIES SUFFIX ".html")
-#target_compile_options(${target} PUBLIC "--use-port=sdl2")
-#target_link_options(${target} PUBLIC "--use-port=sdl2")
+find_package(OpenGL REQUIRED)
+#find_package(doctest REQUIRED)
+
+add_subdirectory(lib/glfw-3.4)
+add_subdirectory(src)
+add_subdirectory(app/rasterize)
+add_subdirectory(app/platformer)
