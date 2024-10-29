@@ -7,6 +7,7 @@
 #include <vector>
 #include <stdexcept>
 #include <sstream>
+#include <geo/point2.h>
 
 using namespace std;
 
@@ -38,6 +39,14 @@ namespace geo {
 
     Vec2 Vec2::operator-(Vec2 v) const {
         return Vec2(x - v.x, y - v.y);
+    }
+
+    Point2 Vec2::operator+(Point2 v) const {
+        return Point2(x + v.getX(), y + v.getY());
+    }
+
+    Point2 Vec2::operator-(Point2 v) const {
+        return Point2(x - v.getX(), y - v.getY());
     }
 
     Vec2 Vec2::operator*(float s) const {

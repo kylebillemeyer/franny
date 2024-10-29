@@ -10,6 +10,8 @@ using vec2_size_type = vector<float>::size_type;
 
 namespace geo {
 
+    class Point2;
+
     class Vec2 {
     public:
         Vec2(float x, float y);
@@ -21,6 +23,8 @@ namespace geo {
 
         Vec2 operator+(Vec2 v) const;
         Vec2 operator-(Vec2 v) const;
+        Point2 operator+(Point2 v) const;
+        Point2 operator-(Point2 v) const;
         Vec2 operator*(float s) const;
         Vec2 operator/(float s) const;
         float dot(Vec2 v) const;

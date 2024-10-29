@@ -7,7 +7,7 @@
 #include <math.h>
 
 #include "geo/vec3.h"
-#include "vec2.h"
+#include "geo/vec2.h"
 
 using namespace std;
 

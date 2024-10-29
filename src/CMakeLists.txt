@@ -1,6 +1,7 @@
 add_library(frannylib STATIC
         glad.c
         geo/matrix.cpp
+        geo/point2.cpp
         geo/vec2.cpp
         geo/vec3.cpp
         geo/vec4.cpp

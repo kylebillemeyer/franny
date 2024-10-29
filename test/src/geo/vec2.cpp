@@ -4,14 +4,16 @@
 
 #include "geo/vec2.h"
 
+#include <cmath>
 #include <iostream>
 #include <doctest/doctest.h>
 #include <geo/math.h>
+#include <geo/point2.h>
 
 using namespace geo;
 
 TEST_CASE("vector") {
-    SUBCASE("addition") {
+    SUBCASE("addition (vector)") {
         SUBCASE("with identity vector") {
             auto vec = Vec2(1, 2);
             CHECK(vec == vec + Vec2(0, 0));
@@ -19,6 +21,17 @@ TEST_CASE("vector") {
 
         SUBCASE("with non-identity vector") {
             CHECK(Vec2(1, 2) + Vec2(3, 4) == Vec2(4, 6));
+        }
+    }
+
+    SUBCASE("addition (point)") {
+        SUBCASE("with identity vector") {
+            auto p = Point2(1, 2);
+            CHECK(p == Vec2(0, 0) + p);
+        }
+
+        SUBCASE("with non-identity vector") {
+            CHECK(Vec2(1, 2) + Point2(3, 4) == Point2(4, 6));
         }
     }
 
@@ -61,7 +74,7 @@ TEST_CASE("vector") {
 
     SUBCASE("length") {
         CHECK(Vec2(1, 0).len() == 1);
-        CHECK(isClose(Vec2(2, 2).len(), sqrt(8)));
+        CHECK(isClose(Vec2(2, 2).len(), ::sqrt(8)));
     }
 
     SUBCASE("norm") {

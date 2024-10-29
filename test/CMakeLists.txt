@@ -3,6 +3,7 @@ option(ENABLE_TEST_COVERAGE "Enable test coverage" OFF)
 add_executable(frannytest
         src/main.cpp
         src/geo/matrix.cpp
+        src/geo/point2.cpp
         src/geo/vec2.cpp
 )
 target_link_libraries(frannytest frannylib)
