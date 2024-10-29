@@ -1,4 +1,7 @@
 #include "geo/vec2.h"
+
+#include <cmath>
+
 #include "geo/math.h"
 
 #include <vector>
@@ -50,7 +53,7 @@ namespace geo {
     }
 
     float Vec2::len() const {
-        return sqrtf(x * x + y * y);
+        return sqrt(x * x + y * y);
     }
 
     Vec2 Vec2::norm() const {
