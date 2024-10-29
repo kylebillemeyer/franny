@@ -19,7 +19,16 @@ namespace geo {
         float getY() const;
         void setY(float y);
 
+        Vec2 operator+(Vec2 v) const;
+        Vec2 operator-(Vec2 v) const;
+        Vec2 operator*(float s) const;
+        Vec2 operator/(float s) const;
         float dot(Vec2 v) const;
+        float len() const;
+        Vec2 norm() const;
+        Vec2 lerp(Vec2 v, float t) const;
+        float angle(Vec2 v) const;
+        Vec2 project(Vec2 v) const;
 
         bool operator==(const Vec2 & vec) const;
 

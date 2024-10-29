@@ -21,6 +21,9 @@ namespace geo {
         float getZ() const;
         void setZ(float z);
 
+        Vec3 add(Vec3 v) const;
+        Vec3 sub(Vec3 v) const;
+        Vec3 mul(float s) const;
         float dot(Vec3 v) const;
         Vec3 cross(Vec3 v) const;
 

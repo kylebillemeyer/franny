@@ -14,5 +14,6 @@ find_package(OpenGL REQUIRED)
 
 add_subdirectory(lib/glfw-3.4)
 add_subdirectory(src)
+add_subdirectory(test)
 add_subdirectory(app/rasterize)
 add_subdirectory(app/platformer)

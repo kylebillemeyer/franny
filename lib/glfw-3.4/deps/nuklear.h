@@ -25446,7 +25446,7 @@ nk_tooltipfv(struct nk_context *ctx, const char *fmt, va_list args)
 ///    ALTERNATIVE B - Public Domain (www.unlicense.org)
 ///    This is free and unencumbered software released into the public domain.
 ///    Anyone is free to copy, modify, publish, use, compile, sell, or distribute this
-///    software, either in source code form or as a compiled binary, for any purpose,
+///    software, either in src code form or as a compiled binary, for any purpose,
 ///    commercial or non-commercial, and by any means.
 ///    In jurisdictions that recognize copyright laws, the author or authors of this
 ///    software dedicate any and all copyright interest in the software to the public

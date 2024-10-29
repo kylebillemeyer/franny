@@ -46,5 +46,21 @@ namespace geo {
     void Vec4::setW(float w) {
         this->w = w;
     }
+
+    Vec4 Vec4::add(Vec4 v) const {
+        return Vec4(x + v.x, y + v.y, z + v.z, w + v.w);
+    }
+
+    Vec4 Vec4::sub(Vec4 v) const {
+        return Vec4(x - v.x, y - v.y, z - v.z, w - v.w);
+    }
+
+    Vec4 Vec4::mul(float s) const {
+        return Vec4(x * s, y * s, z * s, w * s);
+    }
+
+    float Vec4::dot(Vec4 v) const {
+        return x * v.x + y * v.y + z * v.z + w * v.w;
+    }
 }
 

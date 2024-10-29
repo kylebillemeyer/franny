@@ -16,10 +16,10 @@
 //    in a product, an acknowledgment in the product documentation would
 //    be appreciated but is not required.
 //
-// 2. Altered source versions must be plainly marked as such, and must not
+// 2. Altered src versions must be plainly marked as such, and must not
 //    be misrepresented as being the original software.
 //
-// 3. This notice may not be removed or altered from any source
+// 3. This notice may not be removed or altered from any src
 //    distribution.
 //
 //========================================================================
@@ -318,7 +318,7 @@ static GLFWbool updateUnicodeData(void)
     if (!_glfw.ns.inputSource)
     {
         _glfwInputError(GLFW_PLATFORM_ERROR,
-                        "Cocoa: Failed to retrieve keyboard layout input source");
+                        "Cocoa: Failed to retrieve keyboard layout input src");
         return GLFW_FALSE;
     }
 

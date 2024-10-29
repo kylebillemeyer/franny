@@ -93,7 +93,7 @@
 # endif
 #endif /* DUMMYSTRUCTNAME */
 
-/* These are for compatibility with the Wine source tree */
+/* These are for compatibility with the Wine src tree */
 
 #ifndef WINELIB_NAME_AW
 # ifdef __MINGW_NAME_AW

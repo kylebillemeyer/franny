@@ -22,6 +22,11 @@ namespace geo {
         float getW() const;
         void setW(float w);
 
+        Vec4 add(Vec4 v) const;
+        Vec4 sub(Vec4 v) const;
+        Vec4 mul(float s) const;
+        float dot(Vec4 v) const;
+
     private:
         float x;
         float y;

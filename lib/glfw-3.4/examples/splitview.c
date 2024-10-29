@@ -329,7 +329,7 @@ static void drawAllViews(void)
     }
     glLoadMatrixf((const GLfloat*) view);
 
-    // Configure and enable light source 1
+    // Configure and enable light src 1
     glLightfv(GL_LIGHT1, GL_POSITION, light_position);
     glLightfv(GL_LIGHT1, GL_AMBIENT, light_ambient);
     glLightfv(GL_LIGHT1, GL_DIFFUSE, light_diffuse);

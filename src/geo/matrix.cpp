@@ -92,13 +92,14 @@ namespace geo {
         return res;
     }
 
+    Vec2 Matrix::mult(const Vec2 & vec) const {
+        auto res = mult(Vec3(vec.getX(), vec.getY(), 0));
+        return Vec2(res.getX(), res.getY());
+    }
+
     Vec3 Matrix::mult(const Vec3 & vec) const {
         auto hom = Matrix(1, 4);
         hom.setCol(0, vector<float>{ vec.getX(), vec.getY(), vec.getZ(), 1 });
-
-        cout << endl << vec << endl;
-        cout << endl << hom << endl;
-         cout << endl << (*this) << endl;
 
         auto res = mult(hom);
         auto v = Vec3(res.getPos(0, 0), res.getPos(0, 1), res.getPos(0, 2));

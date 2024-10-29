@@ -16,10 +16,10 @@
 //    in a product, an acknowledgment in the product documentation would
 //    be appreciated but is not required.
 //
-// 2. Altered source versions must be plainly marked as such, and must not
+// 2. Altered src versions must be plainly marked as such, and must not
 //    be misrepresented as being the original software.
 //
-// 3. This notice may not be removed or altered from any source
+// 3. This notice may not be removed or altered from any src
 //    distribution.
 //
 //========================================================================
@@ -99,7 +99,7 @@ struct {
 
 
 //========================================================================
-// Texture declarations (we hard-code them into the source code, since
+// Texture declarations (we hard-code them into the src code, since
 // they are so simple)
 //========================================================================
 
@@ -751,13 +751,13 @@ static void setup_lights(void)
     float l1pos[4], l1amb[4], l1dif[4], l1spec[4];
     float l2pos[4], l2amb[4], l2dif[4], l2spec[4];
 
-    // Set light source 1 parameters
+    // Set light src 1 parameters
     l1pos[0] =  0.f;  l1pos[1] = -9.f; l1pos[2] =   8.f;  l1pos[3] = 1.f;
     l1amb[0] = 0.2f;  l1amb[1] = 0.2f;  l1amb[2] = 0.2f;  l1amb[3] = 1.f;
     l1dif[0] = 0.8f;  l1dif[1] = 0.4f;  l1dif[2] = 0.2f;  l1dif[3] = 1.f;
     l1spec[0] = 1.f; l1spec[1] = 0.6f; l1spec[2] = 0.2f; l1spec[3] = 0.f;
 
-    // Set light source 2 parameters
+    // Set light src 2 parameters
     l2pos[0] =  -15.f; l2pos[1] =  12.f; l2pos[2] = 1.5f; l2pos[3] =  1.f;
     l2amb[0] =    0.f; l2amb[1] =   0.f; l2amb[2] =  0.f; l2amb[3] =  1.f;
     l2dif[0] =   0.2f; l2dif[1] =  0.4f; l2dif[2] = 0.8f; l2dif[3] =  1.f;

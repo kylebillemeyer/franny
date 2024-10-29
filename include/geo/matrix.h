@@ -4,8 +4,10 @@
 // Include necessary libraries
 #include <vector>
 #include <sstream>
-#include "geo/vec3.h"
 #include <math.h>
+
+#include "geo/vec3.h"
+#include "vec2.h"
 
 using namespace std;
 
@@ -29,6 +31,7 @@ namespace geo {
         void setPos(int col, int row, float value);
 
         Matrix mult(const Matrix & mat) const;
+        Vec2 mult(const Vec2 & vec) const;
         Vec3 mult(const Vec3 & vec) const;
 
         bool operator==(const Matrix &mat) const;

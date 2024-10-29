@@ -16,10 +16,10 @@
 //    in a product, an acknowledgment in the product documentation would
 //    be appreciated but is not required.
 //
-// 2. Altered source versions must be plainly marked as such, and must not
+// 2. Altered src versions must be plainly marked as such, and must not
 //    be misrepresented as being the original software.
 //
-// 3. This notice may not be removed or altered from any source
+// 3. This notice may not be removed or altered from any src
 //    distribution.
 //
 //========================================================================
@@ -3076,7 +3076,7 @@ static void dataSourceHandleTarget(void* userData,
     if (_glfw.wl.selectionSource != source)
     {
         _glfwInputError(GLFW_PLATFORM_ERROR,
-                        "Wayland: Unknown clipboard data source");
+                        "Wayland: Unknown clipboard data src");
         return;
     }
 }
@@ -3159,7 +3159,7 @@ void _glfwSetClipboardStringWayland(const char* string)
     if (!_glfw.wl.selectionSource)
     {
         _glfwInputError(GLFW_PLATFORM_ERROR,
-                        "Wayland: Failed to create clipboard data source");
+                        "Wayland: Failed to create clipboard data src");
         return;
     }
     wl_data_source_add_listener(_glfw.wl.selectionSource,

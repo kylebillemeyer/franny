@@ -23,7 +23,7 @@ set(header_paths
     "${GLFW_SOURCE_DIR}/include/GLFW/glfw3.h"
     "${GLFW_SOURCE_DIR}/include/GLFW/glfw3native.h")
 
-# Format the source list into a Doxyfile INPUT value that Doxygen can parse
+# Format the src list into a Doxyfile INPUT value that Doxygen can parse
 foreach(path IN LISTS header_paths)
     string(APPEND GLFW_DOXYGEN_INPUT " \\\n\"${path}\"")
 endforeach()

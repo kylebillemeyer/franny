@@ -17,10 +17,10 @@
 //    in a product, an acknowledgment in the product documentation would
 //    be appreciated but is not required.
 //
-// 2. Altered source versions must be plainly marked as such, and must not
+// 2. Altered src versions must be plainly marked as such, and must not
 //    be misrepresented as being the original software.
 //
-// 3. This notice may not be removed or altered from any source
+// 3. This notice may not be removed or altered from any src
 //    distribution.
 //
 //========================================================================
@@ -37,7 +37,7 @@
 // Internal key state used for sticky keys
 #define _GLFW_STICK 3
 
-// Internal constants for gamepad mapping source types
+// Internal constants for gamepad mapping src types
 #define _GLFW_JOYSTICK_AXIS     1
 #define _GLFW_JOYSTICK_BUTTON   2
 #define _GLFW_JOYSTICK_HATBIT   3

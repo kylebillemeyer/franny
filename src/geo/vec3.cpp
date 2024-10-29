@@ -39,6 +39,18 @@ namespace geo {
         this->z = z;
     }
 
+    Vec3 Vec3::add(Vec3 v) const {
+        return Vec3(x + v.x, y + v.y, z + v.z);
+    }
+
+    Vec3 Vec3::sub(Vec3 v) const {
+        return Vec3(x - v.x, y - v.y, z - v.z);
+    }
+
+    Vec3 Vec3::mul(float s) const {
+        return Vec3(x * s, y * s, z * s);
+    }
+
     float Vec3::dot(Vec3 v) const {
         return x * v.x + y * v.y + z * v.z;
     }

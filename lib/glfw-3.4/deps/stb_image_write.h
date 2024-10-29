@@ -17,7 +17,7 @@ ABOUT:
    The PNG output is not optimal; it is 20-50% larger than the file
    written by a decent optimizing implementation; though providing a custom
    zlib compress function (see STBIW_ZLIB_COMPRESS) can mitigate that.
-   This library is designed for source code compactness and simplicity,
+   This library is designed for src code compactness and simplicity,
    not optimal image file size or run-time performance.
 
 BUILDING:
@@ -1706,7 +1706,7 @@ SOFTWARE.
 ALTERNATIVE B - Public Domain (www.unlicense.org)
 This is free and unencumbered software released into the public domain.
 Anyone is free to copy, modify, publish, use, compile, sell, or distribute this
-software, either in source code form or as a compiled binary, for any purpose,
+software, either in src code form or as a compiled binary, for any purpose,
 commercial or non-commercial, and by any means.
 In jurisdictions that recognize copyright laws, the author or authors of this
 software dedicate any and all copyright interest in the software to the public

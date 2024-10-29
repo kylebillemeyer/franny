@@ -18,10 +18,10 @@
  *    in a product, an acknowledgment in the product documentation would
  *    be appreciated but is not required.
  *
- * 2. Altered source versions must be plainly marked as such, and must not
+ * 2. Altered src versions must be plainly marked as such, and must not
  *    be misrepresented as being the original software.
  *
- * 3. This notice may not be removed or altered from any source
+ * 3. This notice may not be removed or altered from any src
  *    distribution.
  *
  *************************************************************************/
@@ -3189,7 +3189,7 @@ GLFWAPI void glfwWindowHintString(int hint, const char* value);
  *  application bundle's `Info.plist`.  For more information, see
  *  [High Resolution Guidelines for OS X][hidpi-guide] in the Mac Developer
  *  Library.  The GLFW test and example programs use a custom `Info.plist`
- *  template for this, which can be found as `CMake/Info.plist.in` in the source
+ *  template for this, which can be found as `CMake/Info.plist.in` in the src
  *  tree.
  *
  *  [hidpi-guide]: https://developer.apple.com/library/mac/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Explained/Explained.html
@@ -5798,7 +5798,7 @@ GLFWAPI GLFWjoystickfun glfwSetJoystickCallback(GLFWjoystickfun callback);
  *  internal list with any gamepad mappings it finds.  This string may
  *  contain either a single gamepad mapping or many mappings separated by
  *  newlines.  The parser supports the full format of the `gamecontrollerdb.txt`
- *  source file including empty lines and comments.
+ *  src file including empty lines and comments.
  *
  *  See @ref gamepad_mapping for a description of the format.
  *
@@ -5972,7 +5972,7 @@ GLFWAPI const char* glfwGetClipboardString(GLFWwindow* window);
  *
  *  The resolution of the timer is system dependent, but is usually on the order
  *  of a few micro- or nanoseconds.  It uses the highest-resolution monotonic
- *  time source on each operating system.
+ *  time src on each operating system.
  *
  *  @return The current time, in seconds, or zero if an
  *  [error](@ref error_handling) occurred.
