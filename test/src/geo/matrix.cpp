@@ -8,7 +8,7 @@
 
 using namespace geo;
 
-TEST_CASE("matrix") {
+TEST_CASE("Matrix2") {
     SUBCASE("matrix multiplication") {
         SUBCASE("with identity matrix") {
             auto m1 = Matrix(3, 3);

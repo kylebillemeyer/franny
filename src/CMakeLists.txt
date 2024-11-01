@@ -6,6 +6,7 @@ add_library(frannylib STATIC
         geo/vec2.cpp
         geo/vec3.cpp
         geo/vec4.cpp
+        geo/line2.cpp
         engine/engine.cpp
         entity/level.cpp
         entity/platform.cpp

@@ -1,5 +1,5 @@
 #include "geo/matrix.h"
-#include "geo/math.h"
+#include "utility/math.h"
 
 #include <vector>
 #include <stdexcept>
@@ -7,6 +7,7 @@
 #include <iostream>
 
 using namespace std;
+using namespace utility;
 
 namespace geo {
 

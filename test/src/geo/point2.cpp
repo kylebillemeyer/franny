@@ -5,13 +5,11 @@
 #include "geo/vec2.h"
 #include "geo/point2.h"
 
-#include <iostream>
 #include <doctest/doctest.h>
-#include <geo/math.h>
 
 using namespace geo;
 
-TEST_CASE("point") {
+TEST_CASE("Point2") {
     SUBCASE("addition") {
         SUBCASE("with identity vector") {
             auto p = Point2(1, 2);

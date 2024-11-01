@@ -2,13 +2,14 @@
 
 #include <cmath>
 
-#include "geo/math.h"
+#include "utility/math.h"
 
 #include <vector>
 #include <stdexcept>
 #include <sstream>
 
 using namespace std;
+using namespace utility;
 
 namespace geo {
     Point2::Point2(float x, float y) {

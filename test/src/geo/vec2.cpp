@@ -7,12 +7,13 @@
 #include <cmath>
 #include <iostream>
 #include <doctest/doctest.h>
-#include <geo/math.h>
+#include <utility/math.h>
 #include <geo/point2.h>
 
 using namespace geo;
+using namespace utility;
 
-TEST_CASE("vector") {
+TEST_CASE("Vec2") {
     SUBCASE("addition (vector)") {
         SUBCASE("with identity vector") {
             auto vec = Vec2(1, 2);
@@ -78,8 +79,8 @@ TEST_CASE("vector") {
     }
 
     SUBCASE("norm") {
-        CHECK(Vec2(1, 0).norm() == Vec2(1, 0));
-        CHECK(Vec2(3, 4).norm() == Vec2(3 / sqrt(25), 4 / sqrt(25)));
+        CHECK(Vec2(1, 0).normalize() == Vec2(1, 0));
+        CHECK(Vec2(3, 4).normalize() == Vec2(3 / sqrt(25), 4 / sqrt(25)));
     }
 
     SUBCASE("linear interpolation") {

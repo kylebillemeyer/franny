@@ -3,7 +3,7 @@
 #include <stdexcept>
 #include <vector>
 
-namespace geo {
+namespace utility {
     inline float dot(const std::vector<float> & l, const std::vector<float> & r) {
         if (l.size() != r.size()) {
             throw std::invalid_argument("row and col vectors must have same size");

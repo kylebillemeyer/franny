@@ -5,6 +5,7 @@ add_executable(frannytest
         src/geo/matrix.cpp
         src/geo/point2.cpp
         src/geo/vec2.cpp
+        src/geo/line2.cpp
 )
 target_link_libraries(frannytest frannylib)
 set_target_properties(frannytest PROPERTIES CXX_STANDARD 17)

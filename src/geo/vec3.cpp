@@ -1,11 +1,12 @@
 #include "geo/vec3.h"
-#include "geo/math.h"
+#include "utility/math.h"
 
 #include <vector>
 #include <stdexcept>
 #include <sstream>
 
 using namespace std;
+using namespace utility;
 
 namespace geo {
     

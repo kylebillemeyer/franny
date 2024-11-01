@@ -2,7 +2,7 @@
 
 #include <cmath>
 
-#include "geo/math.h"
+#include "utility/math.h"
 
 #include <vector>
 #include <stdexcept>
@@ -10,6 +10,7 @@
 #include <geo/point2.h>
 
 using namespace std;
+using namespace utility;
 
 namespace geo {
     Vec2::Vec2(float x, float y) {
@@ -65,7 +66,7 @@ namespace geo {
         return sqrt(x * x + y * y);
     }
 
-    Vec2 Vec2::norm() const {
+    Vec2 Vec2::normalize() const {
         auto l = len();
         return Vec2(x / l, y / l);
     }
@@ -88,6 +89,10 @@ namespace geo {
     Vec2 Vec2::project(Vec2 v) const {
         auto s = dot(v) / pow(v.len(), 2);
         return v * s;
+    }
+
+    Vec2 Vec2::orthogonal() const {
+        return Vec2(-y, x);
     }
 
     bool Vec2::operator==(const Vec2 &vec) const {
