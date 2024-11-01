@@ -1,21 +1,20 @@
 // Based on: https://github.com/JoeyDeVries/LearnOpenGL/blob/master/includes/learnopengl/shader_s.h
 
 #include <iostream>
-#include <vector>
 #include <string>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <stb/stb_image.h>
-#include <utility/key.h>
+#include <franny/utility/key.h>
 
-#include "geo/matrix.h"
-#include "render/shader.h"
-#include "render/texture.h"
+#include "franny/geo/matrix.h"
+#include "franny/render/shader.h"
+#include "franny/render/texture.h"
 
 using namespace std;
-using namespace geo;
-using namespace render;
-using namespace utility;
+using namespace franny::geo;
+using namespace franny::render;
+using namespace franny::utility;
 
 float mixAmt = .2;
 

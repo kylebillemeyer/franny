@@ -8,7 +8,7 @@ using namespace std;
 
 using vec3_size_type = vector<float>::size_type;
 
-namespace geo {
+namespace franny::geo {
 
     class Vec3 {
     public:

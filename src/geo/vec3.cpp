@@ -1,14 +1,14 @@
-#include "geo/vec3.h"
-#include "utility/math.h"
+#include "franny/geo/vec3.h"
+#include "franny/utility/math.h"
 
 #include <vector>
 #include <stdexcept>
 #include <sstream>
 
 using namespace std;
-using namespace utility;
+using namespace franny::utility;
 
-namespace geo {
+namespace franny::geo {
     
     Vec3::Vec3(float x, float y, float z) {
         this->setX(x);

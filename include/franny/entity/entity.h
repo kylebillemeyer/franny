@@ -3,11 +3,11 @@
 
 #include <nlohmann/json.hpp>
 #include <utility>
-#include "geo/vec2.h"
+#include "franny/geo/vec2.h"
 
 using json = nlohmann::json;
 
-namespace entity {
+namespace franny::entity {
     class Entity {
     protected:
         std::string name;

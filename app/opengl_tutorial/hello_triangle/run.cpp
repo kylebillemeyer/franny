@@ -1,16 +1,15 @@
 // Based on: https://github.com/JoeyDeVries/LearnOpenGL/blob/master/includes/learnopengl/shader_s.h
 
 #include <iostream>
-#include <vector>
 #include <string>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "geo/matrix.h"
-#include "render/shader.h"
+#include "franny/geo/matrix.h"
+#include "franny/render/shader.h"
 
 using namespace std;
-using namespace geo;
-using namespace render;
+using namespace franny::geo;
+using namespace franny::render;
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height) {
     glViewport(0, 0, width, height);

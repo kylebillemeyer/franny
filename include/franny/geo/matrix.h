@@ -6,14 +6,14 @@
 #include <sstream>
 #include <math.h>
 
-#include "geo/vec3.h"
-#include "geo/vec2.h"
+#include "franny/geo/vec3.h"
+#include "franny/geo/vec2.h"
 
 using namespace std;
 
 using mat_size_type = vector<vector<float>>::size_type;
 
-namespace geo {
+namespace franny::geo {
 
     class Matrix {
     public:

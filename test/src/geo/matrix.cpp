@@ -2,11 +2,11 @@
 #include <iostream>
 
 #include "doctest/doctest.h"
-#include "geo/matrix.h"
+#include "franny/geo/matrix.h"
 
-#include <geo/vec2.h>
+#include <franny/geo/vec2.h>
 
-using namespace geo;
+using namespace franny::geo;
 
 TEST_CASE("Matrix2") {
     SUBCASE("matrix multiplication") {

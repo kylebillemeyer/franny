@@ -1,17 +1,17 @@
-#include "geo/point2.h"
+#include "franny/geo/point2.h"
 
 #include <cmath>
 
-#include "utility/math.h"
+#include "franny/utility/math.h"
 
 #include <vector>
 #include <stdexcept>
 #include <sstream>
 
 using namespace std;
-using namespace utility;
+using namespace franny::utility;
 
-namespace geo {
+namespace franny::geo {
     Point2::Point2(float x, float y) {
         this->setX(x);
         this->setY(y);

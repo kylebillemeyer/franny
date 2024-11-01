@@ -2,14 +2,14 @@
 // Created by bille on 11/1/2024.
 //
 
-#ifndef KEY_STATE_H
-#define KEY_STATE_H
+#ifndef KEYS_H
+#define KEYS_H
 #include <unordered_map>
 #include <set>
 
 #include "GLFW/glfw3.h"
 
-namespace utility {
+namespace franny::utility {
     enum KeyState {
         DOWN,
         UP
@@ -37,4 +37,4 @@ namespace utility {
     };
 }
 
-#endif //KEY_STATE_H
+#endif //KEYS_H

@@ -1,8 +1,8 @@
-#include "utility/key.h"
+#include "franny/utility/key.h"
 
 #include "GLFW/glfw3.h"
 
-namespace utility {
+namespace franny::utility {
     KeyManager::KeyManager(GLFWwindow * window, const std::set<int> &keysToTrack): window(window), keys(keysToTrack) {
         for (auto key : keysToTrack) {
             lastState[key] = UP;

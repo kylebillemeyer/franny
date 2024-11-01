@@ -1,5 +1,5 @@
-#include "geo/matrix.h"
-#include "utility/math.h"
+#include "franny/geo/matrix.h"
+#include "franny/utility/math.h"
 
 #include <vector>
 #include <stdexcept>
@@ -7,9 +7,9 @@
 #include <iostream>
 
 using namespace std;
-using namespace utility;
+using namespace franny::utility;
 
-namespace geo {
+namespace franny::geo {
 
     Matrix::Matrix(const mat_size_type width, const mat_size_type height) {
         m = vector(height, vector<float>(width));

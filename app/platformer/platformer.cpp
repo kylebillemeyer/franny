@@ -1,17 +1,20 @@
 #include <iostream>
 #include <string>
 
-#include "engine/engine.h"
-#include "utility/entity.h"
+#include "franny/engine/engine.h"
+#include "franny/utility/entity.h"
+
+using namespace franny::engine;
+using namespace franny::utility;
 
 int main()
 {
-    auto *engine = new engine::Engine();
+    auto *engine = new Engine();
     std::string path = "tmp/test.json";
     engine->load(path);
 
     std::cout << engine->getRootEntity()->getName() << std::endl;
-    const auto platform = utility::entity::findEntityByPath(*engine->getRootEntity(), "TestPlatform");
+    const auto platform = findEntityByPath(*engine->getRootEntity(), "TestPlatform");
     std::cout << platform->getName() << std::endl;
 
     engine->init();

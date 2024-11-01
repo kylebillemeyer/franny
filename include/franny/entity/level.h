@@ -1,14 +1,15 @@
 #ifndef LEVEL_H
 #define LEVEL_H
 
-#include "geo/vec2.h"
-#include "entity/entity.h"
-#include "entity/platform.h"
-#include "utility/parse.h"
+#include "franny/geo/vec2.h"
+#include "franny/entity/entity.h"
+#include "franny/entity/platform.h"
+#include "franny/utility/parse.h"
 
 using json = nlohmann::json;
 
-namespace entity {
+namespace franny::entity {
+
     class Level : public Entity {
     protected:
         geo::Vec2 spawnPoint;
@@ -37,9 +38,9 @@ namespace entity {
         static Level *fromJson(json &properties) {
             const auto name = properties.at("name").get<std::string>();
 
-            const auto initialPosition = utility::parse::parseVec2(properties.at("initialPosition"));
-            const auto spawnPoint = utility::parse::parseVec2(properties.at("spawnPoint"));
-            const auto finishPoint = utility::parse::parseVec2(properties.at("finishPoint"));
+            const auto initialPosition = utility::parseVec2(properties.at("initialPosition"));
+            const auto spawnPoint = utility::parseVec2(properties.at("spawnPoint"));
+            const auto finishPoint = utility::parseVec2(properties.at("finishPoint"));
 
             return new Level(name, initialPosition, spawnPoint, finishPoint);
         }

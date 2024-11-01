@@ -7,7 +7,7 @@
 #include <sstream>
 #include <vector>
 
-namespace utility::string {
+namespace franny::utility {
     inline std::vector<std::string> split(const std::string &s, const char delim) {
         std::vector<std::string> result;
         std::stringstream ss(s);

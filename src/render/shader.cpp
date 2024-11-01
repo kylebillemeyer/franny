@@ -1,6 +1,8 @@
-#include "render/shader.h"
+#include "franny/render/shader.h"
 
-namespace render {
+#include <sstream>
+
+namespace franny::render {
     Shader::Shader(const char *vertexPath, const char *fragmentPath) {
         // 1. retrieve the vertex/fragment source code from filePath
         std::string vertexCode;

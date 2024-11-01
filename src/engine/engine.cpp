@@ -1,17 +1,18 @@
 #include <fstream>
 
-#include "engine/Engine.h"
-#include "utility/entity.h"
+#include "franny/engine/engine.h"
+#include "franny/utility/entity.h"
 
-using entity::Entity;
+using namespace franny::entity;
+using namespace franny::utility;
 
-namespace engine {
+namespace franny::engine {
     Engine::Engine() = default;
 
     void Engine::load(std::string &rootEntityPath) {
         std::ifstream f("tmp/test.json");
         json data = json::parse( f );
-        rootEntity = utility::entity::parseEntityJson(data);
+        rootEntity = parseEntityJson(data);
     }
 
     void initHelp(Entity &entity) {
@@ -19,7 +20,7 @@ namespace engine {
     }
 
     void Engine::init() {
-        utility::entity::applyEntityTree(*rootEntity, initHelp);
+        applyEntityTree(*rootEntity, initHelp);
     }
 
     void updateHelp(Entity &entity) {
@@ -31,8 +32,8 @@ namespace engine {
 
     void Engine::run() {
         while (true) {
-            utility::entity::applyEntityTree(*rootEntity, updateHelp);
-            utility::entity::applyEntityTree(*rootEntity, drawHelp);
+            applyEntityTree(*rootEntity, updateHelp);
+            applyEntityTree(*rootEntity, drawHelp);
         }
     }
 

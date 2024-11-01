@@ -1,12 +1,11 @@
 #include <iostream>
-#include <vector>
 #include <string>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "geo/matrix.h"
+#include "franny/geo/matrix.h"
 
 using namespace std;
-using namespace geo;
+using namespace franny::geo;
 
 const char *vertexShaderSource = "#version 330 core\n"
         "layout (location = 0) in vec3 aPos;\n"

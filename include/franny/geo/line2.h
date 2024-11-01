@@ -1,8 +1,8 @@
 #ifndef LINE2_H
 #define LINE2_H
-#include "geo/point2.h"
+#include "franny/geo/point2.h"
 
-namespace geo {
+namespace franny::geo {
     class Vec2;
     class Point2;
 

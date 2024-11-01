@@ -10,13 +10,14 @@
 
 #include <nlohmann/json.hpp>
 
-#include "entity/level.h"
-#include "entity/entity.h"
-#include "utility/string.h"
+#include "franny/entity/level.h"
+#include "franny/entity/entity.h"
+#include "franny/utility/string.h"
 
 using json = nlohmann::json;
+using namespace franny::entity;
 
-namespace utility::entity {
+namespace franny::utility {
     inline Entity *parseEntityJson(json &root) {
         auto children = root.at("children");
 
@@ -31,9 +32,9 @@ namespace utility::entity {
 
         Entity *entity = nullptr;
         if (type == "Level") {
-            entity = ::entity::Level::fromJson(properties);
+            entity = Level::fromJson(properties);
         } else if (type == "Platform") {
-            entity = ::entity::Platform::fromJson(properties);
+            entity = Platform::fromJson(properties);
         }
 
         return entity;
@@ -57,7 +58,7 @@ namespace utility::entity {
     }
 
     inline Entity *findEntityByPath(Entity &rootEntity, const std::string &path) {
-        const std::vector<std::string> pathSegments = string::split(path, '/');
+        const std::vector<std::string> pathSegments = split(path, '/');
 
         Entity &parent = rootEntity;
         for (auto &pathSegment: pathSegments) {

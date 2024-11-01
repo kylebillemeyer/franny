@@ -1,11 +1,11 @@
-#include "geo/line2.h"
+#include "franny/geo/line2.h"
 
 #include <cmath>
-#include <utility/math.h>
+#include <franny/utility/math.h>
 
-using namespace utility;
+using namespace franny::utility;
 
-namespace geo {
+namespace franny::geo {
     Line2::Line2(Point2 p, Vec2 v, Vec2 norm): p(p), v(v), norm(norm) {}
 
     float Line2::distance(Point2 r) const {

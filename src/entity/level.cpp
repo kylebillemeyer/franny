@@ -1,16 +1,17 @@
 #include <nlohmann/json.hpp>
-#include "entity/level.h"
+#include "franny/entity/level.h"
 
 using string = std::string;
 using json = nlohmann::json;
+using namespace franny::geo;
 
-namespace entity {
+namespace franny::entity {
 
-    geo::Vec2 Level::getSpawnPoint() {
+    Vec2 Level::getSpawnPoint() {
         return spawnPoint;
     }
 
-    geo::Vec2 Level::getFinishPoint() {
+    Vec2 Level::getFinishPoint() {
         return finishPoint;
     }
 

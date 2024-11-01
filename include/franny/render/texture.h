@@ -1,11 +1,7 @@
-//
-// Created by bille on 10/31/2024.
-//
-
 #ifndef TEXTURE_H
 #define TEXTURE_H
 
-namespace render {
+namespace franny::render {
     class Texture {
     public:
         Texture(const char *imgPath,

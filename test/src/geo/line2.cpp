@@ -2,16 +2,16 @@
 // Created by Kyle Billemeyer on 10/27/24.
 //
 
-#include "geo/vec2.h"
+#include "franny/geo/vec2.h"
 
 #include <cmath>
 #include <iostream>
 #include <doctest/doctest.h>
-#include <utility/math.h>
-#include <geo/line2.h>
+#include <franny/utility/math.h>
+#include <franny/geo/line2.h>
 
-using namespace geo;
-using namespace utility;
+using namespace franny::geo;
+using namespace franny::utility;
 
 TEST_CASE("Line2") {
     SUBCASE("distance") {

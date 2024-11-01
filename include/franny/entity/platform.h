@@ -3,13 +3,14 @@
 
 #include <nlohmann/json.hpp>
 
-#include "entity/entity.h"
-#include "geo/vec2.h"
-#include "utility/parse.h"
+#include "franny/entity/entity.h"
+#include "franny/geo/vec2.h"
+#include "franny/utility/parse.h"
 
 using json = nlohmann::json;
 
-namespace entity {
+namespace franny::entity {
+
     class Platform : public Entity {
     protected:
         geo::Vec2 dimensions;
@@ -33,8 +34,8 @@ namespace entity {
 
         static Platform *fromJson(json &properties) {
             const auto name = properties.at("name").get<std::string>();
-            const auto initialPosition = utility::parse::parseVec2(properties.at("initialPosition"));
-            const auto dimensions = utility::parse::parseVec2(properties.at("dimensions"));
+            const auto initialPosition = utility::parseVec2(properties.at("initialPosition"));
+            const auto dimensions = utility::parseVec2(properties.at("dimensions"));
 
             return new Platform(name, initialPosition, dimensions);
         }

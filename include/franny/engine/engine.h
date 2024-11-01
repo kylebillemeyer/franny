@@ -1,11 +1,11 @@
 #ifndef ENGINE_H
 #define ENGINE_H
 
-#include "entity/entity.h"
+#include "franny/entity/entity.h"
 
-using entity::Entity;
+using namespace franny::entity;
 
-namespace engine {
+namespace franny::engine {
     class Engine
     {
         Entity* rootEntity = nullptr;

@@ -1,13 +1,9 @@
-//
-// Created by Kyle Billemeyer on 10/27/24.
-//
-
-#include "geo/vec2.h"
-#include "geo/point2.h"
+#include "franny/geo/vec2.h"
+#include "franny/geo/point2.h"
 
 #include <doctest/doctest.h>
 
-using namespace geo;
+using namespace franny::geo;
 
 TEST_CASE("Point2") {
     SUBCASE("addition") {

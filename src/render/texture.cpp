@@ -1,4 +1,4 @@
-#include "render/texture.h";
+#include "franny/render/texture.h";
 
 #include <iostream>
 #include <glad/glad.h>
@@ -6,7 +6,7 @@
 
 using namespace std;
 
-namespace render {
+namespace franny::render {
     Texture::Texture(const char *imgPath,
                      const int imageFormat,
                      const int wrap_s_mode,

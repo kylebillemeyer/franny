@@ -1,10 +1,11 @@
-#include "entity/platform.h"
+#include "franny/entity/platform.h"
 
 using json = nlohmann::json;
+using namespace franny::geo;
 
-namespace entity {
+namespace franny::entity {
 
-    geo::Vec2 Platform::getDimensions() {
+    Vec2 Platform::getDimensions() {
         return dimensions;
     }
 

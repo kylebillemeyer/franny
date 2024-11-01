@@ -1,12 +1,8 @@
-#include "geo/vec4.h"
-
-#include <vector>
-#include <stdexcept>
-#include <sstream>
+#include "franny/geo/vec4.h"
 
 using namespace std;
 
-namespace geo {
+namespace franny::geo {
     
     Vec4::Vec4(float x, float y, float z, float w /*=1.0F*/) {
         this->setX(x);

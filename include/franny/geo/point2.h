@@ -3,13 +3,13 @@
 
 #include <vector>
 #include <sstream>
-#include "geo/vec2.h"
+#include "franny/geo/vec2.h"
 
 using namespace std;
 
 using vec2_size_type = vector<float>::size_type;
 
-namespace geo {
+namespace franny::geo {
 
     class Point2 {
     public:

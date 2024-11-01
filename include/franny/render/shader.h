@@ -4,10 +4,9 @@
 #include <glad/glad.h> // include glad to get the required OpenGL headers
 #include <string>
 #include <fstream>
-#include <sstream>
 #include <iostream>
 
-namespace render {
+namespace franny::render {
     class Shader
     {
     public:
