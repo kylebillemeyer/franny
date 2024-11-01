@@ -1,5 +1,6 @@
 add_library(frannylib STATIC
         glad.c
+        stb.cpp
         geo/matrix.cpp
         geo/point2.cpp
         geo/vec2.cpp
@@ -8,7 +9,9 @@ add_library(frannylib STATIC
         engine/engine.cpp
         entity/level.cpp
         entity/platform.cpp
-        ../include/utility/parse.h
+        render/shader.cpp
+        render/texture.cpp
+        utility/key.cpp
 )
 target_include_directories(frannylib PUBLIC ../include)
 target_link_libraries(frannylib PUBLIC glfw OpenGL::GL)
