@@ -1,0 +1,3 @@
+add_executable(transformations run.cpp)
+target_link_libraries(transformations PRIVATE frannylib)
+set_target_properties(transformations PROPERTIES CXX_STANDARD 17)

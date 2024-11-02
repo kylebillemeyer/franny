@@ -5,6 +5,9 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <franny/geo/matrix.h>
+
+using namespace franny::geo;
 
 namespace franny::render {
     class Shader
@@ -18,6 +21,8 @@ namespace franny::render {
         void setBool(const std::string &name, bool value) const;
         void setInt(const std::string &name, int value) const;
         void setFloat(const std::string &name, float value) const;
+        void setMatrix(const std::string &name, const GLfloat * value, const bool transpose = GL_FALSE) const;
+        void setMatrix2(const std::string &name, const Matrix &value) const;
 
     private:
         // utility function for checking shader compilation/linking errors.

@@ -1,10 +1,10 @@
 #ifndef MATRIX_H
 #define MATRIX_H
 
-// Include necessary libraries
 #include <vector>
 #include <sstream>
 #include <math.h>
+#include <GL/gl.h>
 
 #include "franny/geo/vec3.h"
 #include "franny/geo/vec2.h"
@@ -30,9 +30,12 @@ namespace franny::geo {
         void setCol(int c, const vector<float> & col);
         void setPos(int col, int row, float value);
 
-        Matrix mult(const Matrix & mat) const;
-        Vec2 mult(const Vec2 & vec) const;
-        Vec3 mult(const Vec3 & vec) const;
+        Matrix transpose() const;
+        Matrix operator*(const Matrix & mat) const;
+        Vec2 operator*(const Vec2 & vec) const;
+        Vec3 operator*(const Vec3 & vec) const;
+
+        float * rowMajor() const;
 
         bool operator==(const Matrix &mat) const;
 
@@ -112,7 +115,7 @@ namespace franny::geo {
             return os;
         }
 
-    private:
+    public:
         // outer array represents row arrays
         // inner array represents columns elements
         vector<vector<float>> m;

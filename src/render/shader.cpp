@@ -70,4 +70,16 @@ namespace franny::render {
     void Shader::setFloat(const std::string &name, float value) const {
         glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
     };
+
+    void Shader::setMatrix(const std::string &name, const GLfloat * value, const bool transpose) const {
+        glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, transpose, value);
+    }
+
+    void Shader::setMatrix2(const std::string &name, const Matrix & value) const {
+        auto *trans = value.rowMajor();
+        glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_TRUE, trans);
+
+        delete[] trans;
+        trans = nullptr;
+    }
 }

@@ -72,7 +72,22 @@ namespace franny::geo {
         m[row][col] = value;
     }
 
-    Matrix Matrix::mult(const Matrix & mat) const {
+    Matrix Matrix::transpose() const {
+        auto t = Matrix(getWidth(), getHeight());
+
+        const int width = static_cast<int>(getWidth());
+        const int height = static_cast<int>(getHeight());
+
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                t.setPos(i, j, getPos(j, i));
+            }
+        }
+
+        return t;
+    }
+
+    Matrix Matrix::operator*(const Matrix & mat) const {
         if (getWidth() != mat.getHeight()) {
             std::stringstream ss;
             ss << "Left matrix of width " << getWidth() << " does not match right matrix of height "<< mat.getHeight();
@@ -93,19 +108,35 @@ namespace franny::geo {
         return res;
     }
 
-    Vec2 Matrix::mult(const Vec2 & vec) const {
-        auto res = mult(Vec3(vec.getX(), vec.getY(), 0));
+    Vec2 Matrix::operator*(const Vec2 & vec) const {
+        auto res = (*this) * Vec3(vec.getX(), vec.getY(), 0);
         return Vec2(res.getX(), res.getY());
     }
 
-    Vec3 Matrix::mult(const Vec3 & vec) const {
+    Vec3 Matrix::operator*(const Vec3 & vec) const {
         auto hom = Matrix(1, 4);
         hom.setCol(0, vector<float>{ vec.getX(), vec.getY(), vec.getZ(), 1 });
 
-        auto res = mult(hom);
+        auto res = (*this) * hom;
         auto v = Vec3(res.getPos(0, 0), res.getPos(0, 1), res.getPos(0, 2));
 
         return v;
+    }
+
+    float *Matrix::rowMajor() const {
+        const int height = static_cast<int>(getHeight());
+        const int width = static_cast<int>(getWidth());
+
+        auto *arr = new float[width*height];
+
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                const auto index = i*width + j;
+                arr[index] = m[i][j];
+            }
+        }
+
+        return arr;
     }
 
     bool Matrix::operator==(const Matrix &mat) const {
